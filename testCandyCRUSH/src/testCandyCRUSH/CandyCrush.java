@@ -575,23 +575,20 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 		}			
 	}
 	
-	
-	/*CHUTE DE LUCAS
-	 * int x = 1;
-		int y = 9;
-		boolean test=true;
-		
-		
-		for(y=0;y<10;y++) {
-			for(x=1;x<9;x++) {
-				if(grille[x+1][y].estVide()) {
-					grille[x+1][y]=grille[x][y];
-					grille[x][y]=grille[x-1][y];
-					grille[x-1][y].setCouleur("Vide");
-				}
-			}
-		}
-	 */
-	
+	public void Chute() {
+        int i = 1;
+        int j = 0;
+
+
+
+        for(j=0;j<10;j++) {
+            for(i=1;i<9;i++) {
+                if(grille[i+1][j].estVide()) {
+                    grille[i+1][j]=grille[i][j];
+                    grille[i][j]=grille[i-1][j];
+                }
+            }
+        }
+	}
 	
 }
