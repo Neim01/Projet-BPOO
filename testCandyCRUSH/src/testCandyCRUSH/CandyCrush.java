@@ -240,7 +240,7 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 		grille[x][y] = temp;
 		
 		//On vérifie qu'il y a une combinaison sinon on remet les bonbons en place
-		if(C1.verification(test, x2, y2).equals("Aucune") || C1.verification(test, x, y).equals("Aucune")) {
+		if(C1.verification(test, x2, y2).equals("Aucune") && C1.verification(test, x, y).equals("Aucune")) {
 			temp = grille[x2][y2];
 			grille[x2][y2] = grille[x][y];
 			grille[x][y] = temp;
@@ -254,6 +254,12 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 	public void MettreAjour(String c,int x, int y) {
 		int i = 0;
 		int j = 0;
+		
+		//On vérifie que les coordonnées sont bien dans la grille 
+		if(x>9 || x<0)
+			throw new IllegalArgumentException("Coordonées en dehors de la grille");
+		if(y>9 || y<0)
+			throw new IllegalArgumentException("Coordonées en dehors de la grille");
 		
 		if(c.equals("3BNRH")) {
 			if(x==0 && !(grille[x][y].equals("Vide"))) {
