@@ -149,17 +149,7 @@ public class CandyCrush{
 		grille[9][8] = new Bonbon("Vert",true);
 		grille[9][9] = new Bonbon("Meringue",false);
 	}
-
-
-
-
-/*	
-	public static void main(String[] args) {
-
-		
-		
-	}
-*/	
+	
 	
 	public void quelleCouleur(int x,int y)throws CandyException{
 		if(x>9 || x<0)
@@ -198,18 +188,6 @@ public class CandyCrush{
 		return "Meringue";
 	}
 	
-	/*
-	public void estRaye(int x,int y)throws CandyException{
-		if(x>9 || x<0)
-			throw new CandyException("CandyException");
-		if(y>9 || y<0)
-			throw new CandyException("CandyException");
-		if(grille[x][y]==5 || grille[x][y]==6 || grille[x][y]==7 || grille[x][y]==8)
-			System.out.println("Oui");
-		else
-			System.out.println("Non");
-	}
-	*/
 	
 	public boolean raye(int x ,int y){
 		if(x>9 || x<0)
@@ -269,20 +247,7 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 			throw new CandyException("Aucune combinaison");
 		}
 		
-		/*
-		String o = C1.verification(test, x, y);
-		String o2 = C1.verification(test, x2, y2);
-		*/
 		
-		/*
-		//On vérifie qu'il y a une combinaison sinon on remet les bonbons en place
-		if(C1.verification(test, x2, y2).equals("Aucune") || C1.verification(test, x, y).equals("Aucune")) {
-			temp = grille[x2][y2];
-			grille[x2][y2] = grille[x][y];
-			grille[x][y] = temp;
-			throw new CandyException("Aucune combinaison");
-		}
-		*/
 		
 	}
 
@@ -451,15 +416,6 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 				}
 			}
 		
-		/*if(c.equals("3BNRH")){
-			for(j=y;j<y+3;j++) {
-				grille[0][j].setCouleur("Vide");
-				grille[0][j].setRaye(false);
-				for(i=x;i>0;i--) {
-					grille[i][j]=grille[i-1][j];
-				}
-			}
-		}*/
 		
 		if(c.equals("3BRV")){
 			for(j=0;j<10;j++){
@@ -613,19 +569,34 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 		}			
 	}
 	
-	public void chute(){
-		int i;
-		int j;
+	public void Chute() {
+		int x=8;
+		int y;
 		
-		for(i = 0; i<10;i++){
-			for(j=9;j>0;j--){
-				if(grille[j][i].estVide()){
-					grille[j][i]=grille[j][i-1];
-					grille[j][i-1].setCouleur("Vide");
-				}
+		for(y=1;y<9;y++){
+			if(grille[x][y].estVide()){
+				
 			}
 		}
 		
 	}
+	
+	/*CHUTE DE LUCAS
+	 * int x = 1;
+		int y = 9;
+		boolean test=true;
+		
+		
+		for(y=0;y<10;y++) {
+			for(x=1;x<9;x++) {
+				if(grille[x+1][y].estVide()) {
+					grille[x+1][y]=grille[x][y];
+					grille[x][y]=grille[x-1][y];
+					grille[x-1][y].setCouleur("Vide");
+				}
+			}
+		}
+	 */
+	
 	
 }

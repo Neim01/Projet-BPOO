@@ -35,17 +35,7 @@ public class Combinaison3BonbonsNonRayeHorizonta implements Combinaison {
 			return ("3BNRH");
 		}
 		else
-			return this.next.verification(test, x, y);
-		
-		
-		/*if(test.getGrille(x,y) == test.getGrille(x, y+1) && test.getGrille(x, y+2) == test.getGrille(x,y) && (test.getGrille(x, y) !=0)){
-			System.out.println("3 bonbons "+test.quelleCouleur2(x, y));
-		}
-		else
-			this.next.verification(test, x, y);
-		*/
-		
-		
+			return this.next.verification(test, x, y);		
 
 		
 	}

@@ -14,10 +14,10 @@ public class Combinaison4BonbonsNonRayeVertical implements Combinaison {
 	
 	@Override
 	public String verification(CandyCrush test, int x, int y) {
-		//test.creerGrilleTest();
+		
 		int NbBonbons=1;
 		for(int i = x; i<=8; i++){
-			//if(test.getGrille(i,y) == test.getGrille(i+1,y)){
+		
 			if(test.quelleCouleur2(i, y).equals(test.quelleCouleur2(i+1, y))){
 				NbBonbons++;
 			}
@@ -25,7 +25,7 @@ public class Combinaison4BonbonsNonRayeVertical implements Combinaison {
 				break;
 		}
 		for(int j = x; j>=1; j--){
-			//if(test.getGrille(j,y) == test.getGrille(j-1,y)){
+		
 			if(test.quelleCouleur2(j, y).equals(test.quelleCouleur2(j-1, y))){
 				NbBonbons++;
 			}

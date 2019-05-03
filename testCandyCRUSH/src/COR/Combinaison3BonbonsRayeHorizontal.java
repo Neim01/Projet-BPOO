@@ -14,7 +14,6 @@ public class Combinaison3BonbonsRayeHorizontal implements Combinaison {
 
 	@Override
 	public String verification(CandyCrush test, int x, int y) {
-		//test.creerGrilleTest();
 		int NbBonbons=1;
 		for(int i = y; i<=8; i++){
 			if(test.quelleCouleur2(x, i).equals(test.quelleCouleur2(x, i+1)) || test.raye(x, i)) {
