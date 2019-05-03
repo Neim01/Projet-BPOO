@@ -569,17 +569,6 @@ public void echanger(int x, int y, int x2, int y2,CandyCrush test)throws CandyEx
 		}			
 	}
 	
-	public void Chute() {
-		int x=8;
-		int y;
-		
-		for(y=1;y<9;y++){
-			if(grille[x][y].estVide()){
-				
-			}
-		}
-		
-	}
 	
 	/*CHUTE DE LUCAS
 	 * int x = 1;
